@@ -1,11 +1,11 @@
 {
-    "name": "test/test",
-    "description": "test",
-    "type": "project",
+    "name": "vlad/akulov",
+    "description": "akulov",
+    "type": "library",
 	"license": "-",
 	"authors": [
 		{
-			"name": "Vladislav Akulov",
+			"name": "vladislav akulov",
 			"email": "vladakulov14@gmail.com"
 		}
 	],
@@ -18,7 +18,7 @@
 	
 	"autoload":{
 		"psr-4":{
-			"test\\": "test"
+			"akulov\\": "akulov"
 		}
 	},
 	
@@ -28,6 +28,4 @@
 			"url": "https://github.com/rok9ru/trpo-core"
 		}
 	]
-	
-
 }
