@@ -1,6 +1,6 @@
 <?php
 
-namespace Akulov;
+namespace akulov;
 
 class AkulovException extends \RuntimeException
 {

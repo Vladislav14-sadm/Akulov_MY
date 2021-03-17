@@ -1,6 +1,6 @@
 <?php
 
-namespace Akulov;
+namespace akulov;
 
 use Akulov\AkulovException as E;
 
