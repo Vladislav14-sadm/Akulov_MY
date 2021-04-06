@@ -2,7 +2,7 @@
 
 namespace akulov;
 
-use Akulov\AkulovException as E;
+use akulov\AkulovException as E;
 
 class Line
 {
