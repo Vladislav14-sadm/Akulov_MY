@@ -1,7 +1,5 @@
 <?php
 
-namespace tests;
-
 use akulov\AkulovException;
 use akulov\Line;
 use PHPUnit\Framework\TestCase;

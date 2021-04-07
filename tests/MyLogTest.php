@@ -1,6 +1,6 @@
 <?php
 
-namespace tests;
+require __DIR__ . './../vendor/autoload.php';
 
 use akulov\MyLog;
 use PHPUnit\Framework\TestCase;
@@ -8,16 +8,36 @@ use PHPUnit\Framework\TestCase;
 class MyLogTest extends TestCase
 {
 
-    public function testLog()
+    public function testWrite()
     {
-        $this->expectOutputString("This line equation does not exist");
-        MyLog::log("This line equation does not exist");
-        MyLog::write();
+        $this->assertEquals('', \akulov\MyLog::write(123));
+        $this->assertEquals('', \akulov\MyLog::write("test"));
+        $this->assertEquals('', \akulov\MyLog::write());
     }
 
-    public function testInstance()
+    /**
+     * @dataProvider providerSolve
+     * @param $str
+     */
+    public function testMyLog($str)
     {
-        $this->assertInstanceOf(MyLog::class, MyLog::Instance());
+        $this->assertEquals('', \akulov\MyLog::log($str));
     }
 
+    public function providerSolve(): array
+    {
+        return array(
+            array("Logtest"),
+            array("lOg@!$%(#$"),
+            array(1211001101),
+            array(false)
+        );
+    }
+
+    public function testMyLogEx()
+    {
+        $this->expectException(TypeError::class);
+        $this->assertEquals('', MyLog::log(null));
+        $this->assertEquals('', MyLog::log());
+    }
 }

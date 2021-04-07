@@ -1,7 +1,5 @@
 <?php
 
-namespace tests;
-
 use akulov\AkulovException;
 use akulov\Square;
 use PHPUnit\Framework\TestCase;
@@ -58,5 +56,4 @@ class SquareTest extends TestCase
             array(4, 2, 1)
         );
     }
-
 }
